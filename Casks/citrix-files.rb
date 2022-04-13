@@ -9,5 +9,11 @@ cask "citrix-files" do
   desc "ShareFile is a secure content collaboration, file sharing and sync software that supports all the document-centric tasks and workflow needs of small and large businesses."
   homepage "https://www.citrix.com/products/citrix-sharefile/"
 
+  livecheck do
+    url "https://www.citrix.com/downloads/citrix-content-collaboration/product-software/citrix-files-for-mac.html"
+    strategy :page_match
+    regex(%r{Citrix Files for Mac v(.*)</span>})
+  end
+
   pkg "Install Citrix Files.pkg"
 end
