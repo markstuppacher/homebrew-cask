@@ -16,4 +16,9 @@ cask "citrix-files" do
   end
 
   pkg "Install Citrix Files.pkg"
+
+  uninstall script: {
+     executable: "#{staged_path}/Citrix Files.app/Contents/Resources/uninstall"
+   }
+
 end
