@@ -18,7 +18,7 @@ cask "citrix-files" do
   pkg "Install Citrix Files.pkg"
 
   uninstall script: {
-     executable: "#{staged_path}/Citrix Files.app/Contents/Resources/uninstall.sh",
+     executable: "#{appdir}/Citrix Files.app/Contents/Resources/uninstall.sh",
      sudo: true
    }
 
